@@ -16,6 +16,7 @@ pdfs <- page %>%
   html_attr("href") %>% 
   str_subset("\\.pdf") %>% 
   str_subset("ICOTS11_") %>%
+  str_subset("icots/11/") %>%
   str_c("https://iase-web.org/", .) %>% 
   str_replace("\\.pdf.*","") %>% 
   str_c(., ".pdf") %>% 
